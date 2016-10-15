@@ -1,3 +1,7 @@
-let message = "Hello from mayank!!fsff!!!!!!!";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App"
 
-console.log(message);
+
+const app = document.getElementById('app');
+ReactDOM.render(<App/>, app);
