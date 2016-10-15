@@ -28,12 +28,20 @@ export default class App extends React.Component{
 	render(){
 		return(
 				<div>
-					<CreateTodo />
+					<CreateTodo createTask= {this.createTask.bind(this)}/>
 					<h1>React todos app!!!!!</h1>
 					<TodosList todos = {this.state.todos}/>
 				</div>
 			);
 	};
+
+	createTask(task){
+		this.state.todos.push({
+			task,
+			isCompleted: false
+		});
+		this.setState({todos: this.state.todos});
+	}
 
 
 
